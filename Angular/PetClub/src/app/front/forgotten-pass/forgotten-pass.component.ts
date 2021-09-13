@@ -18,7 +18,7 @@ export class ForgottenPassComponent implements OnInit {
     private router:Router) {
     this.tokenStorage.autoLogin();
     this.loggedInUser = this.tokenStorage.getUser();
-    if(this.loggedInUser.id){
+    if(this.loggedInUser){
       this.router.navigate(['home']);
     } 
    }
